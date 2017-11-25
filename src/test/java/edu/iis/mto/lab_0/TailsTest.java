@@ -11,6 +11,7 @@ import org.junit.Test;
 public class TailsTest {
 	
 	private static final String HELLO = "Hello";
+	private static final String ELLO = "ello";
 	private TailsGenerator tailsGenerator;
 	private List<String> tails;
 	@Before
@@ -34,6 +35,11 @@ public class TailsTest {
 	public void tailsShouldReturnEmptyStringAsLastElement() {
 		
 		assertThat(tails.get(tails.size()-1), Matchers.equalTo(""));
+	}
+	@Test
+	public void tailsShouldReturnStringAsSecondElement() {
+
+		assertThat(tails.get(1), Matchers.equalTo(ELLO));
 	}
 
 }
